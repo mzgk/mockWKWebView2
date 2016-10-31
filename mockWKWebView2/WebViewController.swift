@@ -10,6 +10,8 @@ import UIKit
 
 class WebViewController: UIViewController {
 
+    @IBOutlet weak var basedView: UIView!
+
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
