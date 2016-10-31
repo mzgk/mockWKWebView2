@@ -13,6 +13,8 @@
 		325B02001DC714900077B686 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325B01FE1DC714900077B686 /* Main.storyboard */; };
 		325B02021DC714900077B686 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 325B02011DC714900077B686 /* Assets.xcassets */; };
 		325B02051DC714900077B686 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325B02031DC714900077B686 /* LaunchScreen.storyboard */; };
+		325B020E1DC716920077B686 /* WebScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325B020C1DC716920077B686 /* WebScene.storyboard */; };
+		325B02111DC716C20077B686 /* DownLoadScene.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 325B020F1DC716C20077B686 /* DownLoadScene.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		325B02011DC714900077B686 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		325B02041DC714900077B686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		325B02061DC714900077B686 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		325B020D1DC716920077B686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/WebScene.storyboard; sourceTree = "<group>"; };
+		325B02101DC716C20077B686 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/DownLoadScene.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,13 +60,15 @@
 		325B01F71DC714900077B686 /* mockWKWebView2 */ = {
 			isa = PBXGroup;
 			children = (
-				325B01F81DC714900077B686 /* AppDelegate.swift */,
-				325B01FA1DC714900077B686 /* WebViewController.swift */,
-				325B01FC1DC714900077B686 /* DownLoadViewController.swift */,
-				325B01FE1DC714900077B686 /* Main.storyboard */,
-				325B02011DC714900077B686 /* Assets.xcassets */,
-				325B02031DC714900077B686 /* LaunchScreen.storyboard */,
 				325B02061DC714900077B686 /* Info.plist */,
+				325B01F81DC714900077B686 /* AppDelegate.swift */,
+				325B01FC1DC714900077B686 /* DownLoadViewController.swift */,
+				325B01FA1DC714900077B686 /* WebViewController.swift */,
+				325B02011DC714900077B686 /* Assets.xcassets */,
+				325B020F1DC716C20077B686 /* DownLoadScene.storyboard */,
+				325B02031DC714900077B686 /* LaunchScreen.storyboard */,
+				325B01FE1DC714900077B686 /* Main.storyboard */,
+				325B020C1DC716920077B686 /* WebScene.storyboard */,
 			);
 			path = mockWKWebView2;
 			sourceTree = "<group>";
@@ -129,7 +135,9 @@
 			files = (
 				325B02051DC714900077B686 /* LaunchScreen.storyboard in Resources */,
 				325B02021DC714900077B686 /* Assets.xcassets in Resources */,
+				325B020E1DC716920077B686 /* WebScene.storyboard in Resources */,
 				325B02001DC714900077B686 /* Main.storyboard in Resources */,
+				325B02111DC716C20077B686 /* DownLoadScene.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -163,6 +171,22 @@
 				325B02041DC714900077B686 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		325B020C1DC716920077B686 /* WebScene.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325B020D1DC716920077B686 /* Base */,
+			);
+			name = WebScene.storyboard;
+			sourceTree = "<group>";
+		};
+		325B020F1DC716C20077B686 /* DownLoadScene.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				325B02101DC716C20077B686 /* Base */,
+			);
+			name = DownLoadScene.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
