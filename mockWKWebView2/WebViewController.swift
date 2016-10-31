@@ -1,5 +1,5 @@
 //
-//  SecondViewController.swift
+//  WebViewController.swift
 //  mockWKWebView2
 //
 //  Created by mzgk on 2016/10/31.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class SecondViewController: UIViewController {
+class WebViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
