@@ -20,19 +20,18 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         // Do any additional setup after loading the view, typically from a nib.
 
         let webConfiguration = WKWebViewConfiguration()
+        webConfiguration.allowsInlineMediaPlayback = true   // インライン動画再生
         webView = WKWebView(frame: basedView.bounds, configuration: webConfiguration)
         webView?.uiDelegate = self
         webView?.navigationDelegate = self
         webView?.allowsBackForwardNavigationGestures = true
-        webView?.translatesAutoresizingMaskIntoConstraints = false
+        webView?.autoresizingMask = [.flexibleWidth, .flexibleHeight]
 
-        let url = URL(string: "http://www.yahoo.co.jp")
+        let url = URL(string: "http://www.yahoo.co.jp/")
         let urlRequest = URLRequest(url: url!)
         var _ = webView?.load(urlRequest)
 
         basedView.addSubview(webView!)
-
-        setupWebViewCpnstraints()
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,14 +39,30 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         // Dispose of any resources that can be recreated.
     }
 
+    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransition(to: size, with: coordinator)
+
+        var _ = webView?.reloadFromOrigin()
+    }
+
+
+/*
     // webViewのAutolayout制約の作成
-    func setupWebViewCpnstraints() {
+    func setupWebViewConstraints() {
         webView?.topAnchor.constraint(equalTo: basedView.topAnchor).isActive = true
         webView?.leadingAnchor.constraint(equalTo: basedView.leadingAnchor).isActive = true
         webView?.trailingAnchor.constraint(equalTo: basedView.trailingAnchor).isActive = true
         webView?.bottomAnchor.constraint(equalTo: basedView.bottomAnchor).isActive = true
     }
 
-    // TODO: 横→縦に回転しときにViewの横幅が更新されない（縦→横は大丈夫）
+    func addViewportString() {
+        var scriptContent = "var meta = document.createElement('meta');"
+        scriptContent += "meta.name='viewport';"
+        scriptContent += "meta.content='width=device-width,initial-scale=1';"
+        scriptContent += "document.getElementsByTagName('head')[0].appendChild(meta);"
+
+        webView?.evaluateJavaScript(scriptContent, completionHandler: nil)
+    }
+*/
 }
 
