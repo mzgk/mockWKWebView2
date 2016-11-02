@@ -39,13 +39,6 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         // Dispose of any resources that can be recreated.
     }
 
-    override func viewWillTransition(to size: CGSize, with coordinator: UIViewControllerTransitionCoordinator) {
-        super.viewWillTransition(to: size, with: coordinator)
-
-        var _ = webView?.reloadFromOrigin()
-    }
-
-
 /*
     // webViewのAutolayout制約の作成
     func setupWebViewConstraints() {
@@ -53,15 +46,6 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         webView?.leadingAnchor.constraint(equalTo: basedView.leadingAnchor).isActive = true
         webView?.trailingAnchor.constraint(equalTo: basedView.trailingAnchor).isActive = true
         webView?.bottomAnchor.constraint(equalTo: basedView.bottomAnchor).isActive = true
-    }
-
-    func addViewportString() {
-        var scriptContent = "var meta = document.createElement('meta');"
-        scriptContent += "meta.name='viewport';"
-        scriptContent += "meta.content='width=device-width,initial-scale=1';"
-        scriptContent += "document.getElementsByTagName('head')[0].appendChild(meta);"
-
-        webView?.evaluateJavaScript(scriptContent, completionHandler: nil)
     }
 */
 }
