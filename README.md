@@ -1,9 +1,11 @@
 # タブブラウザ
 
-## 2016.11.2
+## タスク
 - [x] ボタンで、対応するWKWebViewをbaseViewにadd / removeできるかを確認
 - [x] WKWebViewを生成し、配列に格納しておく確認
 - [x] WKWebViewへのURLロードを別スレッドで行う確認
+- [ ] リンクの長押しで新規タブで開くを追加（mockWKWebViewを参照）
+- [ ] タブの動的生成
 
 ## 参考
 [WKWebView](http://stackoverflow.com/questions/26920644/web-page-of-wkwebview-not-displaying-page-inside-of-dispatch-get-main-queue)
