@@ -19,6 +19,8 @@ class WebViewController: UIViewController, WKUIDelegate, WKNavigationDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
+        // WebのATS無効化
+        // Info.plist -> App Transport Security Settings -> Allow Arbitrary Loads in Web Content = YES
         let webConfiguration = WKWebViewConfiguration()
         webConfiguration.allowsInlineMediaPlayback = true   // インライン動画再生
         webView = WKWebView(frame: basedView.bounds, configuration: webConfiguration)
